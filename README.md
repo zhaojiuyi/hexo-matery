@@ -12,6 +12,7 @@ git clone https://github.com/zhaojiuyi/hexo-matery.git
 
 ```
 cd hexo-matery
+npm install
 ```
 
 3.运行
