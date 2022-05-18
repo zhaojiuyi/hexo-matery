@@ -110,6 +110,10 @@ auto_excerpt:
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
+deploy:
+  type: 
+  repository: 
+  branch: 
 
 # 搜索
 search:

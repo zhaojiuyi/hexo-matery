@@ -22,6 +22,8 @@ menu:
   Friends:
     url: /friends
     icon: fas fa-address-book
+  gallery:
+    url: /gallery
   # 二级菜单写法如下
   #Medias:
   #  icon: fas fa-list
@@ -183,7 +185,7 @@ reward:
 # 是否激活复制文章时追加博客和作者的版权信息.
 copyright:
   enable: true
-  minCharNumber: 50 # 至少复制多少个字符就追加版权信息.
+  minCharNumber: 300 # 至少复制多少个字符就追加版权信息.
   description: 本文章著作权归作者所有，任何形式的转载都请注明出处。
 
 # Whether to activate the mathjax, this is a global configuration, but the post still does not open the mathjax rendering.
@@ -215,7 +217,7 @@ clicklove:
   
 # 启用天气接口插件
 weather:
-  enable: true
+  enable: false
 
 
 # | 文件名             | 说明                   |
@@ -304,6 +306,17 @@ myGallery:
     - /medias/featureimages/0.jpg
     - /medias/featureimages/1.jpg
     - /medias/featureimages/2.jpg
+# 增加了图片页面
+gallery: 
+  title: 🐏   #标题
+  icon: fa         #这个显示相册页面的图标
+  icon2: fa        #这个显示自己的具体相册里面的相册的图标
+
+PhotoVerifyPassword:
+  enable: true
+  promptMessage: 该相册已加密，请输入密码访问
+  errorMessage: 密码错误，将返回主页！
+
 
 # Whether to display post-calender in the `archive` page
 # 设置在归档页面中是否显示'文章日历'控件
@@ -359,7 +372,7 @@ livere:
 # 介绍: https://cloud.tencent.com/document/product/1110/36841
 # 管理验证码: https://console.cloud.tencent.com/captcha/graphical
 tcaptcha:
-  enable: true
+  enable: false
   appid: xxxxxxxxxx # 你的appid
 
 # The configuration of the Valine comment module is not activated by default.
@@ -368,8 +381,8 @@ tcaptcha:
 # Valine 评论模块的配置，默认为不激活，如要使用，就请激活该配置项，并设置 appId 和 appKey.
 valine:
   enable: true 
-  appId: xxxxxxxxxxx  #你的appid
-  appKey: xxxxxxxxxx   #你的appkey
+  appId: # 你的appid
+  appKey: # 你的appKey
   pageSize: 5                # 每页显示条数
   avatar: monsterid           # 默认头像
   lang: zh-CN 
@@ -409,7 +422,7 @@ githubLink:
 # See: https://twikoo.js.org
 twikoo:
   enable: false
-  envId: twikoo-1gs9l0fb17e7897a # 环境 ID，搭建教程：https://twikoo.js.org/quick-start.html
+  envId:  # 环境 ID，搭建教程：https://twikoo.js.org/quick-start.html
   # region: ap-guangzhou # 环境地域，默认为 ap-shanghai
   # path: 'window.location.pathname' # 自定义文章路径
 
@@ -641,8 +654,8 @@ banner:
 #ICP备案信息尾部显示
 icp:
   enable: false
-  url:  # 备案链接
-  text:  # 备案信息
+  url: # 备案链接
+  text: # 备案信息
 
 # CDN访问加速 
 # 第一次使用本功能，一定要先配置url，再`hexo cl && hexo g && hexo d`部署到GitHub的仓库，注意！必须是GitHub的仓库！
